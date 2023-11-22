@@ -1,18 +1,18 @@
-IDEIA E ESCOPO DO PROJETO
+--IDEIA E ESCOPO DO PROJETO
 
-Banco de dados de biblioteca que permite consultar detalhes dos livros, efetuar empréstimos
-
-
-CONSTRAINTS E RESTRIÇÕES
-
-- Livros já emprestados não podem ser emprestados;
-- Livros +18 não podem ser emprestados para menores (boolean);
-- Livros que não foram emprestados em até 90 dias serão excluídos (trigger);
+--Banco de dados de biblioteca que permite consultar detalhes dos livros, efetuar empréstimos
 
 
-===============================================================================================
+--CONSTRAINTS 
 
-TABELAS
+-- Livros já emprestados não podem ser emprestados;
+-- Livros +18 não podem ser emprestados para menores (boolean);
+-- Livros que não foram emprestados em até 90 dias serão excluídos (trigger);
+
+
+
+
+
 
 CREATE TABLE Autores (
 ID_Autor SERIAL PRIMARY KEY,
@@ -82,9 +82,9 @@ CONSTRAINT chk_livros_etario CHECK(
 );
 
 
-================================================================================
 
-INSERÇÃO DE VALORES
+
+
 
 INSERT INTO Autores (Nome, Nacionalidade) 
 VALUES 
@@ -95,7 +95,7 @@ VALUES
 ('José Saramago', 'Brasileiro'),
 ('Chuck Palahniuk', 'Norte-Americano'),
 ('Stephen Chbosky', 'Norte-Americano'),
-('Erika Leonard James, 'Norte-Americano'),
+('Erika Leonard James', 'Norte-Americano'),
 ('Gillian Flynn', 'Norte-Americano'),
 ('Carla Madeira', 'Brasileiro'),
 ('Edmundo Barreiros', 'Brasileiro');
@@ -108,13 +108,13 @@ VALUES
 ('Alice no País das Maravilhas', 1865, 'Infantil', 1423),
 ('O Pequeno Príncipe', 1943, 'Infantil', 2134),
 ('Diário de um Mago', 1987, 'Juvenil', 2341
-('O Alquimista', 1988, 'Juvenil', 2431),
+('O Alquimista', 1988, 'Juvenil', 2031),
 ('Brida', 1990, 'Juvenil', 3124),
 ('Ensaio Sobre a Cegueira', 1995, 'Juvenil', 3241),
 ('Clube da Luta', 1996, 'Juvenil', 3412),
 ('As Vantagens de Ser Invisível', 1999, 4321),
-('Cinquenta Tons de Cinza', 2011, 'Adulto', 4231),
-('Garota Exemplar', 2012, 'Adulto', 4321),
+('Cinquenta Tons de Cinza', 2011, 'Adulto', 4230),
+('Garota Exemplar', 2012, 'Adulto', 4301),
 ('Tudo é Rio', 2014, 'Adulto', 1432),
 ('A Principe Cativo', 2023, 'Adulto', 2432);
 
@@ -147,7 +147,6 @@ INSERT INTO Emprestimos (ID_Exemplar, ID_Membro, Data_Emprestimo, Data_Devolucao
 VALUES 
 (10, 3, '2021-03-06', 'Devolvido'),
 (1, 5, '2022-10-30', 'Devolvido');
-
 
 
 
