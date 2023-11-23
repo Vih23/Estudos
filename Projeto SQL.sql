@@ -82,6 +82,13 @@ CONSTRAINT chk_livros_etario CHECK(
 );
 
 
+CREATE OR REPLACE FUNCTION ExcluirLivrosNaoEmprestados()
+RETURNS VOID AS $$
+BEGIN
+    DELETE FROM Biblioteca
+    WHERE Status = 'Devolvido' AND Data_Devolucao <= CURRENT_DATE - INTERVAL '90 days';
+END;
+$$ LANGUAGE plpgsql;
 
 
 
