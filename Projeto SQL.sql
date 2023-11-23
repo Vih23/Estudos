@@ -114,7 +114,7 @@ VALUES
 ('Persuasão', 1817, 'Juvenil', 1324),
 ('Alice no País das Maravilhas', 1865, 'Infantil', 1423),
 ('O Pequeno Príncipe', 1943, 'Infantil', 2134),
-('Diário de um Mago', 1987, 'Juvenil', 2341
+('Diário de um Mago', 1987, 'Juvenil', 2341),
 ('O Alquimista', 1988, 'Juvenil', 2031),
 ('Brida', 1990, 'Juvenil', 3124),
 ('Ensaio Sobre a Cegueira', 1995, 'Juvenil', 3241),
@@ -141,7 +141,7 @@ VALUES
 (11, 'Disponível'),
 (12, 'Disponível'),
 (13, 'Disponível'),
-(14, 'Disponível'),
+(14, 'Disponível');
 
 
 INSERT INTO Membros (Nome, Idade)
